@@ -23,3 +23,6 @@ Submit an issue.
 
 -Open a Dischord or Slack.
 
+#Please Help!  We (I) need help getting more code and need help finding ways to help make the API.
+#Validate this code as well so we know this is right.
+
