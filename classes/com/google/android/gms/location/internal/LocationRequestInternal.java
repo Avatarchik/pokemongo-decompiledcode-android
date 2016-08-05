@@ -1,0 +1,101 @@
+package com.google.android.gms.location.internal;
+
+import android.os.Parcel;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+import com.google.android.gms.common.internal.zzw;
+import com.google.android.gms.location.LocationRequest;
+import java.util.Collections;
+import java.util.List;
+
+public class LocationRequestInternal
+  implements SafeParcelable
+{
+  public static final zzm CREATOR = new zzm();
+  static final List<ClientIdentity> zzaFD = ;
+  String mTag;
+  private final int mVersionCode;
+  boolean zzaFE;
+  boolean zzaFF;
+  boolean zzaFG;
+  List<ClientIdentity> zzaFH;
+  boolean zzaFI;
+  LocationRequest zzasN;
+  
+  LocationRequestInternal(int paramInt, LocationRequest paramLocationRequest, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, List<ClientIdentity> paramList, String paramString, boolean paramBoolean4)
+  {
+    this.mVersionCode = paramInt;
+    this.zzasN = paramLocationRequest;
+    this.zzaFE = paramBoolean1;
+    this.zzaFF = paramBoolean2;
+    this.zzaFG = paramBoolean3;
+    this.zzaFH = paramList;
+    this.mTag = paramString;
+    this.zzaFI = paramBoolean4;
+  }
+  
+  public static LocationRequestInternal zza(String paramString, LocationRequest paramLocationRequest)
+  {
+    return new LocationRequestInternal(1, paramLocationRequest, false, true, true, zzaFD, paramString, false);
+  }
+  
+  @Deprecated
+  public static LocationRequestInternal zzb(LocationRequest paramLocationRequest)
+  {
+    return zza(null, paramLocationRequest);
+  }
+  
+  public int describeContents()
+  {
+    return 0;
+  }
+  
+  public boolean equals(Object paramObject)
+  {
+    boolean bool = false;
+    if (!(paramObject instanceof LocationRequestInternal)) {}
+    for (;;)
+    {
+      return bool;
+      LocationRequestInternal localLocationRequestInternal = (LocationRequestInternal)paramObject;
+      if ((zzw.equal(this.zzasN, localLocationRequestInternal.zzasN)) && (this.zzaFE == localLocationRequestInternal.zzaFE) && (this.zzaFF == localLocationRequestInternal.zzaFF) && (this.zzaFG == localLocationRequestInternal.zzaFG) && (this.zzaFI == localLocationRequestInternal.zzaFI) && (zzw.equal(this.zzaFH, localLocationRequestInternal.zzaFH))) {
+        bool = true;
+      }
+    }
+  }
+  
+  int getVersionCode()
+  {
+    return this.mVersionCode;
+  }
+  
+  public int hashCode()
+  {
+    return this.zzasN.hashCode();
+  }
+  
+  public String toString()
+  {
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append(this.zzasN.toString());
+    if (this.mTag != null) {
+      localStringBuilder.append(" tag=").append(this.mTag);
+    }
+    localStringBuilder.append(" nlpDebug=").append(this.zzaFE);
+    localStringBuilder.append(" trigger=").append(this.zzaFG);
+    localStringBuilder.append(" restorePIListeners=").append(this.zzaFF);
+    localStringBuilder.append(" hideAppOps=").append(this.zzaFI);
+    localStringBuilder.append(" clients=").append(this.zzaFH);
+    return localStringBuilder.toString();
+  }
+  
+  public void writeToParcel(Parcel paramParcel, int paramInt)
+  {
+    zzm.zza(this, paramParcel, paramInt);
+  }
+}
+
+
+/* Location:              /Users/tjledwith/Downloads/dex2jar-0.0.9.8/classes_dex2jar.jar!/com/google/android/gms/location/internal/LocationRequestInternal.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
+ */

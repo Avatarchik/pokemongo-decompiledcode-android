@@ -1,0 +1,84 @@
+package com.google.android.gms.identity.intents;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Looper;
+import android.os.RemoteException;
+import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.Api.ApiOptions.HasOptions;
+import com.google.android.gms.common.api.Api.zza;
+import com.google.android.gms.common.api.Api.zzc;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.internal.zzf;
+import com.google.android.gms.common.internal.zzx;
+import com.google.android.gms.internal.zzlb.zza;
+import com.google.android.gms.internal.zzoy;
+
+public final class Address
+{
+  public static final Api<AddressOptions> API = new Api("Address.API", zzRl, zzRk);
+  static final Api.zzc<zzoy> zzRk = new Api.zzc();
+  private static final Api.zza<zzoy, AddressOptions> zzRl = new Api.zza()
+  {
+    public zzoy zza(Context paramAnonymousContext, Looper paramAnonymousLooper, zzf paramAnonymouszzf, Address.AddressOptions paramAnonymousAddressOptions, GoogleApiClient.ConnectionCallbacks paramAnonymousConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener paramAnonymousOnConnectionFailedListener)
+    {
+      zzx.zzb(paramAnonymousContext instanceof Activity, "An Activity must be used for Address APIs");
+      if (paramAnonymousAddressOptions == null) {
+        paramAnonymousAddressOptions = new Address.AddressOptions();
+      }
+      return new zzoy((Activity)paramAnonymousContext, paramAnonymousLooper, paramAnonymouszzf, paramAnonymousAddressOptions.theme, paramAnonymousConnectionCallbacks, paramAnonymousOnConnectionFailedListener);
+    }
+  };
+  
+  public static void requestUserAddress(GoogleApiClient paramGoogleApiClient, final UserAddressRequest paramUserAddressRequest, final int paramInt)
+  {
+    paramGoogleApiClient.zza(new zza(paramGoogleApiClient)
+    {
+      protected void zza(zzoy paramAnonymouszzoy)
+        throws RemoteException
+      {
+        paramAnonymouszzoy.zza(paramUserAddressRequest, paramInt);
+        zzb(Status.zzabb);
+      }
+    });
+  }
+  
+  private static abstract class zza
+    extends zzlb.zza<Status, zzoy>
+  {
+    public zza(GoogleApiClient paramGoogleApiClient)
+    {
+      super(paramGoogleApiClient);
+    }
+    
+    public Status zzd(Status paramStatus)
+    {
+      return paramStatus;
+    }
+  }
+  
+  public static final class AddressOptions
+    implements Api.ApiOptions.HasOptions
+  {
+    public final int theme;
+    
+    public AddressOptions()
+    {
+      this.theme = 0;
+    }
+    
+    public AddressOptions(int paramInt)
+    {
+      this.theme = paramInt;
+    }
+  }
+}
+
+
+/* Location:              /Users/tjledwith/Downloads/dex2jar-0.0.9.8/classes_dex2jar.jar!/com/google/android/gms/identity/intents/Address.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
+ */
