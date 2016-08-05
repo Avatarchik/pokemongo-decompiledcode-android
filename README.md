@@ -23,6 +23,4 @@ Submit an issue.
 
 -Open a Dischord or Slack.
 
-#Please Help!  We (I) need help getting more code and need help finding ways to help make the API.
-#Validate this code as well so we know this is right.
-
+#Please Help out as helping this repo will improve the steps to getting a working API.
