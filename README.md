@@ -11,7 +11,7 @@ You probably got here from the reddit page.  I need help with this repo.  I don'
 *Link Doesn't Work Yet*
 
 #Questions?
-Ask on the reddit.
+Ask on the [reddit](https://www.reddit.com/r/pokemongodev/comments/4wbt5m/pokemon_go_source_code_including_an_unencrypted/).
 
 Email me at ineedacookieplease@gmail.com  
 
