@@ -9,12 +9,17 @@ appreciated!
 
 #Questions?
 Ask on the reddit.
+
 Email me at ineedacookieplease@gmail.com  
+
 Submit an issue.
 
 #To-Do's
--Improve Wiki
+-Improve Wiki.
+
 -Improve APK and Create a iOS version.
+
 -Make a website.
--Open a Dischord or Slack
+
+-Open a Dischord or Slack.
 
